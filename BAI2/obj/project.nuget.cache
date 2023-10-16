@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "BexbB9PpJ451WrXK/jsOiRD/4pu5XIorZPLYOIUWQd0k5l6c3lQlaa5ISclvA8d4xHa0lMb3VPC/h1VzCnzgRg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\thijm\\Downloads\\Aftekenopdrachten2_wagons\\Uitgangssituatie\\BAI2\\BAI2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\thijm\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\thijm\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\thijm\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\thijm\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.32\\microsoft.netcore.app.host.win-x64.3.1.32.nupkg.sha512"
+  ],
+  "logs": []
+}
