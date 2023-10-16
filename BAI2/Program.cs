@@ -12,39 +12,33 @@ namespace BAI
             // *** IMPLEMENTATION HERE *** //
             
             // Verplaatste de 7de bit naar de eerste en check vervolgens of hij aan staat
-            return (b & 64) == 64;
+            return (b >> 7) == 1;
         }
         public static uint Vermogen(uint b)
         {
             //Bit 5-6
             
-            //00 Vermogen is 0%
+            // 00 Vermogen is 0%
             // 01 Vermogen is 33%
             // 10 Vermogen is 67%
             // 11 Vermogen is 100%
             
-            // 6e en 5e zijn niet 1 
-            if ((b & 32) == 0)
+            if ((b & 96) == 0 )
             {
                 return 0;
             }
             
-            if ((b & 16) == 16)
+            if ( (b & 64) == 0)
             {
                 return 33;
             }
-
-            if ((b & 32) == 32)
+            
+            if ((b & 32) == 0)
             {
                 return 67;
             }
-
-            if ((b & 48) == 48)
-            {
-                return 100;
-            }
-            
-            return 0;
+      
+            return 100;
         }
         public static bool Wagon(uint b)
         {
@@ -52,14 +46,14 @@ namespace BAI
             
             
             // *** IMPLEMENTATION HERE *** //
-            return (b & 8) == 8;
+            return (b & 16) == 16;
         }
         public static bool Licht(uint b)
         {
             // Bit 3 (4)
             
             // *** IMPLEMENTATION HERE *** //
-            return (b & 4) == 4;
+            return (b & 8) == 8;
         }
         public static uint ID(uint b)
         {
@@ -113,6 +107,17 @@ namespace BAI
         public static HashSet<uint> SelecteerID(List<uint> inputStroom, uint lower, uint upper)
         {
             HashSet<uint> set = new HashSet<uint>();
+
+            foreach (var element in inputStroom)
+            {
+                uint id = ID(element);
+
+                if (id >= lower && id <= upper)
+                {
+                    set.Add(element);
+                }
+            }
+            
             // *** IMPLEMENTATION HERE *** //
             return set;
         }
@@ -120,15 +125,34 @@ namespace BAI
         public static HashSet<uint> Opdr3a(List<uint> inputStroom)
         {
             HashSet<uint> set = new HashSet<uint>();
-            // *** IMPLEMENTATION HERE *** //
+            set = SelecteerID(inputStroom, 0, 2);
+      
+            HashSet<uint> zonderLicht = new HashSet<uint>();
+            zonderLicht = ZonderLicht(inputStroom);
+            
+            set.IntersectWith(zonderLicht);
+            
             return set;
         }
 
         public static HashSet<uint> Opdr3b(List<uint> inputStroom)
         {
+            // Een verzameling treinen met een ID hoger dan 2 OF met licht. Gebruik hiervoor de set uit opdracht
+            // 3a en Alle uit opdracht 2
+            
+            
+            
             HashSet<uint> set = new HashSet<uint>();
+            set = Opdr3a(inputStroom: inputStroom);
+
+            // Clean set
+            HashSet<uint> set2 = new HashSet<uint>(inputStroom);
+            // Sanitize values, remove the 
+            set2.ExceptWith(set);
+            
+            
             // *** IMPLEMENTATION HERE *** //
-            return set;
+            return set2;
         }
 
         public static void ToonInfo(uint b)
@@ -157,40 +181,40 @@ namespace BAI
 
         static void Main(string[] args)
         {
-            Console.WriteLine("=== Opgave 1 ===");
-            ToonInfo(210);
-            Console.WriteLine();
-
-            List<uint> inputStroom = GetInputStroom();
-
-            Console.WriteLine("=== Opgave 2 ===");
-            HashSet<uint> alle = Alle(inputStroom);
-            PrintSet(alle);
-            HashSet<uint> zonderLicht = ZonderLicht(inputStroom);
-            PrintSet(zonderLicht);
-            HashSet<uint> metWagon = MetWagon(inputStroom);
-            PrintSet(metWagon);
-            HashSet<uint> groter6 = SelecteerID(inputStroom, 6, 7);
-            PrintSet(groter6);
-            Console.WriteLine();
-
-            Console.WriteLine("=== Opgave 3a ===");
-            HashSet<uint> opg3a = Opdr3a(inputStroom);
-            PrintSet(opg3a);
-            foreach (uint b in opg3a)
-            {
-                ToonInfo(b);
-            }
-            Console.WriteLine();
-
-            Console.WriteLine("=== Opgave 3b ===");
-            HashSet<uint> opg3b = Opdr3b(inputStroom);
-            PrintSet(opg3b);
-            foreach (uint b in opg3b)
-            {
-                ToonInfo(b);
-            }
-            Console.WriteLine();
+            // Console.WriteLine("=== Opgave 1 ===");
+            // ToonInfo(210);
+            // Console.WriteLine();
+            //
+            // List<uint> inputStroom = GetInputStroom();
+            //
+            // Console.WriteLine("=== Opgave 2 ===");
+            // HashSet<uint> alle = Alle(inputStroom);
+            // PrintSet(alle);
+            // HashSet<uint> zonderLicht = ZonderLicht(inputStroom);
+            // PrintSet(zonderLicht);
+            // HashSet<uint> metWagon = MetWagon(inputStroom);
+            // PrintSet(metWagon);
+            // HashSet<uint> groter6 = SelecteerID(inputStroom, 6, 7);
+            // PrintSet(groter6);
+            // Console.WriteLine();
+            //
+            // Console.WriteLine("=== Opgave 3a ===");
+            // HashSet<uint> opg3a = Opdr3a(inputStroom);
+            // PrintSet(opg3a);
+            // foreach (uint b in opg3a)
+            // {
+            //     ToonInfo(b);
+            // }
+            // Console.WriteLine();
+            //
+            // Console.WriteLine("=== Opgave 3b ===");
+            // HashSet<uint> opg3b = Opdr3b(inputStroom);
+            // PrintSet(opg3b);
+            // foreach (uint b in opg3b)
+            // {
+            //     ToonInfo(b);
+            // }
+            // Console.WriteLine();
         }
     }
 }

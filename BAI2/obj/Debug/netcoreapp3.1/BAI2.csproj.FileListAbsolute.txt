@@ -1,0 +1,13 @@
+C:\Users\thijm\Downloads\Aftekenopdrachten2_wagons\Uitgangssituatie\BAI2\bin\Debug\netcoreapp3.1\BAI2.exe
+C:\Users\thijm\Downloads\Aftekenopdrachten2_wagons\Uitgangssituatie\BAI2\bin\Debug\netcoreapp3.1\BAI2.deps.json
+C:\Users\thijm\Downloads\Aftekenopdrachten2_wagons\Uitgangssituatie\BAI2\bin\Debug\netcoreapp3.1\BAI2.runtimeconfig.json
+C:\Users\thijm\Downloads\Aftekenopdrachten2_wagons\Uitgangssituatie\BAI2\bin\Debug\netcoreapp3.1\BAI2.runtimeconfig.dev.json
+C:\Users\thijm\Downloads\Aftekenopdrachten2_wagons\Uitgangssituatie\BAI2\bin\Debug\netcoreapp3.1\BAI2.dll
+C:\Users\thijm\Downloads\Aftekenopdrachten2_wagons\Uitgangssituatie\BAI2\bin\Debug\netcoreapp3.1\BAI2.pdb
+C:\Users\thijm\Downloads\Aftekenopdrachten2_wagons\Uitgangssituatie\BAI2\obj\Debug\netcoreapp3.1\BAI2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thijm\Downloads\Aftekenopdrachten2_wagons\Uitgangssituatie\BAI2\obj\Debug\netcoreapp3.1\BAI2.AssemblyInfoInputs.cache
+C:\Users\thijm\Downloads\Aftekenopdrachten2_wagons\Uitgangssituatie\BAI2\obj\Debug\netcoreapp3.1\BAI2.AssemblyInfo.cs
+C:\Users\thijm\Downloads\Aftekenopdrachten2_wagons\Uitgangssituatie\BAI2\obj\Debug\netcoreapp3.1\BAI2.csproj.CoreCompileInputs.cache
+C:\Users\thijm\Downloads\Aftekenopdrachten2_wagons\Uitgangssituatie\BAI2\obj\Debug\netcoreapp3.1\BAI2.dll
+C:\Users\thijm\Downloads\Aftekenopdrachten2_wagons\Uitgangssituatie\BAI2\obj\Debug\netcoreapp3.1\BAI2.pdb
+C:\Users\thijm\Downloads\Aftekenopdrachten2_wagons\Uitgangssituatie\BAI2\obj\Debug\netcoreapp3.1\BAI2.genruntimeconfig.cache
